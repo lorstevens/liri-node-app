@@ -3,10 +3,10 @@
 In this assignment, I made a command line node application called LIRI. 
 LIRI is a Language Interpretation and Recognition Interface. 
 
-**Twitter:** 
+**Twitter API:** 
 When a user types "my-tweets", the application will retrieve my most recent, 20 Twitter tweets. 
 
-**Spotify: **
+**Spotify API: **
 When a user types "spotify-this-song SONG NAME", the application will retrieve the following: 
 
 - Artist(s)
@@ -15,7 +15,7 @@ When a user types "spotify-this-song SONG NAME", the application will retrieve t
 - The album that the song is from
 - If no song is provided then your program will default to "The Sign" by Ace of Base.
 
-**IMDB:**
+**OMDB API:**
 When a user types "movie-this MOVIE TITLE", the terminal will output the following: 
 
 - Title of the movie.
