@@ -12,6 +12,7 @@ var firstArg = process.argv[2];
 if(firstArg === "my-tweets"){
   runTwitter();
 }
+
 else if(firstArg === "spotify-this-song"){
   if (process.argv[3]){
   var value = "";
@@ -21,6 +22,7 @@ else if(firstArg === "spotify-this-song"){
     };
   runSpotify();
 }
+
 else if(firstArg === "movie-this"){
   if (process.argv[3]){
   var value = "";
@@ -40,23 +42,18 @@ else if(firstArg === "do-what-it-says"){
     };
   runDoIt();
 }
+
 else {
   "Liri is not sure where you are asking for. Try again!"
 }
 
 function runTwitter(){
  
-  
-  var client = new twitter(keys.twitterKeys);
-    
+var client = new twitter(keys.twitterKeys);
 
-
-  // var tweets = data[i];
-  var params = {screen_name: 'lornasocool', count: 20};
+var params = {screen_name: 'lornasocool', count: 20};
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
     if (!error) {
-     
-      // console.log(response);
   
        for (var i = 0; i < tweets.length; i++) {
         var date= tweets[i].created_at;
@@ -65,9 +62,11 @@ function runTwitter(){
 
           }
     }
+
     else{
       console.log(error);
     }
+
   });
 
 }
@@ -81,6 +80,7 @@ var spotifyAPI = new spotify(keys.spotifyKeys);
  
 
  spotifyAPI.search({ type: 'track', query: value || "The Sign Ace of Base"}, function(err, data) {
+  
   if (err) {
     return console.log('Error occurred: ' + err);
   }
@@ -99,20 +99,16 @@ var spotifyAPI = new spotify(keys.spotifyKeys);
 
 
 function runOMDB (){
+  
   if (value === undefined) {
    value = 'Mr Nobody';
   }
  
-// Then run a request to the OMDB API with the movie specified
+
 request("http://www.omdbapi.com/?t=" + value + "&y=&plot=short&apikey=40e9cece", function(error, response, body) {
 
-  // If the request is successful (i.e. if the response status code is 200)
   if (!error && response.statusCode === 200) {
 
-
-
-    // Parse the body of the site and recover just the imdbRating
-    // (Note: The syntax below for parsing isn't obvious. Just spend a few moments dissecting it).
     console.log("Title: " + JSON.parse(body).Title);
     console.log("Year: " + JSON.parse(body).Year);
     console.log("IMDB Rating: " + JSON.parse(body).imdbRating);
@@ -123,7 +119,6 @@ request("http://www.omdbapi.com/?t=" + value + "&y=&plot=short&apikey=40e9cece",
     console.log("Actors: " + JSON.parse(body).Actors);
 
   }
-
 
 
 });
