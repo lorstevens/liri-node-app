@@ -16,7 +16,7 @@ Run command 'node liri.js' or one of the commands below.
 When a user types "my-tweets", the application will retrieve my most recent, 20 Twitter tweets. 
 
 **Spotify API:**
-When a user types "spotify-this-song <SONG NAME>", the application will retrieve the following: 
+When a user types "spotify-this-song SONG NAME", the application will retrieve the following: 
 
 - Artist(s)
 - The song's name
