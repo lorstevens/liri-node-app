@@ -3,14 +3,14 @@
 In this assignment, I made a command line node application called LIRI. 
 LIRI is a Language Interpretation and Recognition Interface. 
 
+- - - -
+ ### Getting Started: ###
 
- ### Getting Started ###
- 
 Run command 'node liri.js' or one of the commands below.
 - - - -
 
 
- ### Each Command ###
+ ### Each Command: ###
 
 **Twitter API:** 
 When a user types "my-tweets", the application will retrieve my most recent, 20 Twitter tweets. 
