@@ -3,11 +3,20 @@
 In this assignment, I made a command line node application called LIRI. 
 LIRI is a Language Interpretation and Recognition Interface. 
 
+
+ ### Getting Started ###
+ 
+Run command 'node liri.js' or one of the commands below.
+- - - -
+
+
+ ### Each Command ###
+
 **Twitter API:** 
 When a user types "my-tweets", the application will retrieve my most recent, 20 Twitter tweets. 
 
 **Spotify API:**
-When a user types "spotify-this-song SONG NAME", the application will retrieve the following: 
+When a user types "spotify-this-song <SONG NAME>", the application will retrieve the following: 
 
 - Artist(s)
 - The song's name
@@ -28,3 +37,15 @@ When a user types "movie-this MOVIE TITLE", the terminal will output the followi
 -  Actors in the movie.
 
 Lastly, if the user types "do-what-it-says", the terminal will output the song details for Backstreet Boys' "I Want it That Way."
+
+
+
+
+Plot of the movie.
+Actors in the movie.
+Rotten Tomatoes Rating.
+Rotten Tomatoes URL.
+Or if no movie is passed through, it will default to "Mr. Nobody"
+
+node liri.js do-what-it-says
+Takes the text from random.txt and runs the song through spotify-this-song command
